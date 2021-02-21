@@ -1,0 +1,19 @@
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%; }
+
+.Movies_Section:nth-of-type(1) {
+  margin-top: 50px; }
+
+.Movies_Section {
+  margin-bottom: 20px; }
+
+.Section_Title {
+  margin: 0 0 0 20px; }
+
+@media (max-width: 900px) {
+  .Movies_Section {
+    width: 100%; } }

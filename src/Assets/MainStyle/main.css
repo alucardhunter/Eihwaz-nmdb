@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "DMSans";
+  src: local("DMSans"), url("../Fonts/DMSans-Regular.ttf") format("truetype");
+  font-weight: normal; }
+
+html,
+body {
+  margin: 0;
+  font-family: DMSans !important; }
+
+.Loading_Holder {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vw;
+  color: #6104f7 !important; }

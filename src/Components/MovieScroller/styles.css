@@ -1,0 +1,30 @@
+.Movie_Scroller {
+  width: 100%; }
+
+.Spacer {
+  width: 20px;
+  padding-left: 20px; }
+
+.Movie_Scroller_Container {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  max-width: 85vw;
+  min-width: 85vw; }
+
+.Movie_Scroller_Container::-webkit-scrollbar {
+  height: 8px; }
+
+.Movie_Scroller_Container::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 20px; }
+
+.Movie_Scroller_Container::-webkit-scrollbar-track {
+  background: transparent; }
+
+@media (max-width: 900px) {
+  .Movie_Scroller_Container {
+    width: 100vw;
+    max-width: 100vw; } }

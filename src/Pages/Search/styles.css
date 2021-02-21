@@ -1,0 +1,20 @@
+.Search_Page_Container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 88px);
+  position: relative; }
+
+.Pagination {
+  padding: 20px 0 !important;
+  position: absolute;
+  bottom: 10px; }
+
+.MuiPaginationItem-page.Mui-selected {
+  background-color: #6104f750 !important; }
+
+@media (max-width: 900px) {
+  .Search_Page_Container {
+    min-height: calc(100vh - 68px); } }

@@ -1,0 +1,70 @@
+.Header {
+  background-color: #ffffff !important;
+  height: 100px; }
+
+.Toolbar_Header {
+  display: flex;
+  width: 90vw; }
+
+.Logo_Header {
+  height: 80px;
+  align-self: flex-start;
+  justify-content: flex-start;
+  padding: 10px; }
+
+.Menu_Titles {
+  color: #6104f7 !important;
+  font-size: 20px !important;
+  margin-left: 10px !important;
+  text-transform: none !important;
+  width: 10vw;
+  border-radius: 20px !important;
+  height: 5vh;
+  white-space: nowrap;
+  font-weight: 600 !important; }
+
+.Logo_Container {
+  display: flex;
+  width: 15%;
+  justify-content: flex-end; }
+
+.Menu_Button {
+  height: 50px;
+  align-self: center;
+  color: #000000;
+  display: none !important; }
+
+.Menu_Items_Container {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start; }
+
+.Profile_Container {
+  display: flex;
+  width: 35%;
+  justify-content: flex-end; }
+
+@media (max-width: 900px) {
+  .Toolbar_Header {
+    flex-direction: column;
+    align-items: center; }
+  .Logo_Container {
+    justify-content: center !important;
+    width: 100%; }
+  .Logo_Header {
+    align-self: center; }
+  .Menu_Button {
+    display: flex !important;
+    position: absolute !important;
+    left: 20px; }
+  .Menu_Items_Container {
+    display: none !important; }
+  .Profile_Container {
+    display: none !important; }
+  .Menu_Titles {
+    width: 100%;
+    margin-left: 0 !important; }
+  .MuiPaper-root.MuiDrawer-paper {
+    background-color: transparent !important; }
+  .MuiPaper-elevation16 {
+    box-shadow: unset !important; } }

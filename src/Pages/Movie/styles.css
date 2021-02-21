@@ -1,0 +1,8 @@
+.Movie_Page_Container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 88px);
+  position: relative; }

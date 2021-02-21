@@ -1,0 +1,58 @@
+.Footer_Container {
+  width: 100%;
+  background: linear-gradient(to right, #6104f6cc, #6104f63b);
+  display: flex;
+  flex-direction: row;
+  height: 88px; }
+
+.Holder_Logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid #ffffff;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  width: 200px;
+  padding: 10px 0; }
+
+.Footer_Logo_Title {
+  margin: 0;
+  font-size: 50px;
+  height: 50px;
+  color: #ffffff;
+  font-weight: bold; }
+
+.Footer_Logo_Subtitle {
+  color: #ffffff;
+  margin: 0;
+  font-weight: bold; }
+
+.Footer_Information_Container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: #ffffff;
+  font-weight: bold;
+  flex-direction: column; }
+
+.Footer_Information {
+  margin: 0;
+  text-align: left;
+  width: 300px;
+  font-size: 15px; }
+
+@media (max-width: 900px) {
+  .Holder_Logo {
+    width: 130px; }
+  .Footer_Logo_Title {
+    font-size: 35px;
+    height: 35px; }
+  .Footer_Logo_Subtitle {
+    font-size: 10px; }
+  .Footer_Information {
+    font-size: 10px;
+    width: 170px; }
+  .Footer_Container {
+    height: 68px; } }
