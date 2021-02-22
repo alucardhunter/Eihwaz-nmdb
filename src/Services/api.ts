@@ -5,7 +5,7 @@ const Api = axios.create({
   baseURL: process.env.REACT_APP_TMDB_API
 })
 
-axios.defaults.headers.common.Authorization = `Bearer ${process.env.REACT_APP_TMDB_TOKEN}`
+Api.defaults.headers.common.Authorization = `Bearer ${process.env.REACT_APP_TMDB_TOKEN}`
 
 Api.interceptors.response.use(function (response) {
   // Any status code that lie within the range of 2xx cause this function to trigger
