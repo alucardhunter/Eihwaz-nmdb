@@ -1,7 +1,10 @@
+.Movie_Detail_Holder {
+  width: 100%; }
+
 .Movies_Detail_Container {
   display: flex;
   height: 511px;
-  width: 100vw;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 120px;

@@ -96,7 +96,7 @@ const MovieDetailPoster: React.FC<MovieDetailPosterProps> = (props: MovieDetailP
   }
 
   return (
-    <div>
+    <div className="Movie_Detail_Holder">
       <div className="Movies_Detail_Container" style={{ backgroundImage: 'url(' + imageUrl + ')' }}>
         <div className="Movies_Detail_Poster_Wraper">
           <div className="Movies_Detail_Poster_Container">
