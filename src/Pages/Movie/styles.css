@@ -7,3 +7,7 @@
   min-height: calc(100vh - 88px);
   position: relative;
   margin-bottom: 20px; }
+
+@media (max-width: 900px) {
+  .Movie_Page_Container {
+    min-height: calc(100vh - 68px); } }

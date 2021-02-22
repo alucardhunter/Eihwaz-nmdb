@@ -1,4 +1,5 @@
 .Movies_Detail_Container {
+  display: flex;
   height: 511px;
   width: 100vw;
   background-size: cover;
@@ -35,7 +36,6 @@
   flex-direction: column; }
 
 .Movies_Detail_Titles_Container {
-  overflow: hidden;
   width: 100%;
   padding: 50px 0 0 0; }
 
@@ -72,12 +72,12 @@
     flex-direction: column;
     align-items: center; }
   .Movies_Detail_Buttons {
-    width: 90%;
+    width: 100%;
     margin: 0 0 20px 0 !important; }
   .Movies_Detail_Buttons:nth-child(1) {
     margin-top: 20px !important; }
   .Button_trailer {
-    width: 90%; }
+    width: 100%; }
   .Movies_Detail_Container {
     height: 300px; }
   .Movies_Detail_Poster_Wraper {
@@ -93,4 +93,16 @@
     display: flex;
     justify-content: center; }
   .Movies_Detail_Information_Container {
-    width: 100%; } }
+    width: 100%; }
+  .Movies_Detail_Titles_Container {
+    padding: 10px 0 0 0;
+    width: 90%; }
+  .Movie_Detail_Title {
+    margin: 0;
+    font-size: 20px; }
+  .Movie_Detail_SubTitle {
+    font-size: 15px; }
+  .Movies_Detail_Section_Container {
+    width: 90%; }
+  .Movies_Details_Section_Text {
+    font-weight: 200; } }

@@ -21,7 +21,7 @@ const Movie: React.FC = () => {
     dispatch(getMovieDetail(+movie))
   }, [dispatch])
   return (
-    <Grid className="Movie_Page_Container">
+    <Grid container className="Movie_Page_Container" spacing={0}>
       {movieDetail &&
         <MovieDetailPoster data={movieDetail} />
       }
