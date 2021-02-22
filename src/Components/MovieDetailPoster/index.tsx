@@ -108,15 +108,15 @@ const MovieDetailPoster: React.FC<MovieDetailPosterProps> = (props: MovieDetailP
             <h1 className="Movie_Detail_Title">{data.title}</h1>
             <h3 className="Movie_Detail_SubTitle">({moment(data.release_date).format('YYYY')})</h3>
           </div>
-          <div className="Movies_Detail_Genres_Container">
+          <div className="Movies_Detail_Section_Container">
             <h2 className="Movies_Details_Section_Title">Genres</h2>
             {renderGenres()}
           </div>
-          <div className="Movies_Detail_Genres_Container">
+          <div className="Movies_Detail_Section_Container">
             <h2 className="Movies_Details_Section_Title">Overview</h2>
             <h4 className="Movies_Details_Section_Text">{data.overview}</h4>
           </div>
-          <div className="Movies_Detail_Genres_Container">
+          <div className="Movies_Detail_Section_Container">
             <Button
               className="Movies_Detail_Buttons"
               variant="contained"
@@ -150,6 +150,53 @@ const MovieDetailPoster: React.FC<MovieDetailPosterProps> = (props: MovieDetailP
             </Button>
             }
           </div>
+        </div>
+        <div className="Movies_Detail_Information_Container_App">
+          <div className="Movies_Detail_Titles_Container">
+            <h1 className="Movie_Detail_Title">{data.title}</h1>
+            <h3 className="Movie_Detail_SubTitle">({moment(data.release_date).format('YYYY')})</h3>
+          </div>
+          <div className="Movies_Detail_Section_Container">
+            <h2 className="Movies_Details_Section_Title">Genres</h2>
+            {renderGenres()}
+          </div>
+          <div className="Movies_Detail_Section_Container">
+            <h2 className="Movies_Details_Section_Title">Overview</h2>
+            <h4 className="Movies_Details_Section_Text">{data.overview}</h4>
+          </div>
+          <Button
+            className="Movies_Detail_Buttons"
+            variant="contained"
+            startIcon={<ListAltIcon />}
+            onClick={() => handleTrailerClick()}
+          >
+            Add to Watch List
+            </Button>
+          <Button
+            className="Movies_Detail_Buttons"
+            variant="contained"
+            startIcon={<StarBorder />}
+            onClick={() => {
+              if (checkFavorite()) {
+                handleRemoveFavorite()
+              } else {
+                handleSetFavorite()
+              }
+            }}
+          >
+            {checkFavorite() ? 'Remove From Favorite' : 'Set as Favorite'}
+          </Button>
+          {data.videos!.results!.length > 0 &&
+            <Button
+              className="Button_trailer"
+              variant="contained"
+              color="secondary"
+              startIcon={<PlayCircleOutlineIcon />}
+              onClick={() => handleTrailerClick()}
+            >
+              Trailer
+            </Button>
+          }
         </div>
       </div>
       <Modal
