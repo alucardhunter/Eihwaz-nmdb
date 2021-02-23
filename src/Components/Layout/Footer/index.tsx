@@ -13,7 +13,7 @@ const Footer: React.FC = (): JSX.Element => {
       </h5>
       </div>
       <div className="Footer_Information_Container">
-        <h3 className="Footer_Information">All right reserved to TMDB</h3>
+        <h3 className="Footer_Information">All rights reserved to TMDB</h3>
         <h3 className="Footer_Information">Powered by: Eihwaz Web Solution</h3>
       </div>
     </div>
