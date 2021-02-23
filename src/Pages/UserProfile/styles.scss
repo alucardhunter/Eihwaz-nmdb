@@ -1,0 +1,24 @@
+// best seen at 1500px or less
+.User_Profile_Container {
+  background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #b7e8eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 88px);
+  position: relative;
+}
+
+.Title_Container {
+  width: 100%;
+  margin-top: 130px;
+}
+
+.Title {
+  margin-left: 20px;
+}
+
+.User_Profile_Section {
+  margin-bottom: 20px;
+}

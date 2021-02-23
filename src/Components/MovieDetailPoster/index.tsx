@@ -9,7 +9,7 @@ import StarBorder from '@material-ui/icons/StarBorder'
 import ListAltIcon from '@material-ui/icons/ListAlt'
 import { Button, Modal } from '@material-ui/core'
 import YouTube, { Options } from 'react-youtube'
-import { setFavorites } from '../../Store/Modules/User/userSlice'
+import { setFavorites, setWatchList } from '../../Store/Modules/User/userSlice'
 import { AppDispatch } from '../../Store/store'
 
 interface MovieDetailPosterProps {
@@ -20,7 +20,7 @@ const MovieDetailPoster: React.FC<MovieDetailPosterProps> = (props: MovieDetailP
   const { data } = props
   const dispatch = AppDispatch.dispatch
   const { domain } = useSelector((state: RootState) => state.Auth)
-  const { favorites } = useSelector((state: RootState) => state.User)
+  const { favorites, watchlist } = useSelector((state: RootState) => state.User)
   const [showModal, setShowModal] = useState(false)
   const domainBackdrop = 'http://image.tmdb.org/t/p/w1920_and_h800_multi_faces'
   let imageUrl = domainBackdrop + data.poster_path
@@ -61,6 +61,24 @@ const MovieDetailPoster: React.FC<MovieDetailPosterProps> = (props: MovieDetailP
   const handleRemoveFavorite = () => {
     const newArray = favorites.filter(el => el.id !== data!.id)
     dispatch(setFavorites({ favorites: newArray }))
+  }
+
+  const checkWatchList = () => {
+    const filter = watchlist!.filter(el => el.id === data!.id)
+    if (filter.length > 0) {
+      return true
+    }
+    return false
+  }
+
+  const handleSetWatchList = () => {
+    const newArray = [...watchlist, data]
+    dispatch(setWatchList({ watchlist: newArray }))
+  }
+
+  const handleRemoveWatchList = () => {
+    const newArray = watchlist.filter(el => el.id !== data!.id)
+    dispatch(setWatchList({ watchlist: newArray }))
   }
 
   const renderYoutube = () => {
@@ -122,10 +140,16 @@ const MovieDetailPoster: React.FC<MovieDetailPosterProps> = (props: MovieDetailP
                 className="Movies_Detail_Buttons"
                 variant="contained"
                 startIcon={<ListAltIcon />}
-                onClick={() => { }}
+                onClick={() => {
+                  if (checkWatchList()) {
+                    handleRemoveWatchList()
+                  } else {
+                    handleSetWatchList()
+                  }
+                }}
               >
-                Add to Watch List
-            </Button>
+                {checkWatchList() ? 'Remove From Watch List' : 'Add to Watch List'}
+              </Button>
               <Button
                 className="Movies_Detail_Buttons"
                 variant="contained"
@@ -172,10 +196,16 @@ const MovieDetailPoster: React.FC<MovieDetailPosterProps> = (props: MovieDetailP
             className="Movies_Detail_Buttons"
             variant="contained"
             startIcon={<ListAltIcon />}
-            onClick={() => { }}
+            onClick={() => {
+              if (checkWatchList()) {
+                handleRemoveWatchList()
+              } else {
+                handleSetWatchList()
+              }
+            }}
           >
-            Add to Watch List
-            </Button>
+            {checkWatchList() ? 'Remove From Watch List' : 'Add to Watch List'}
+          </Button>
           <Button
             className="Movies_Detail_Buttons"
             variant="contained"

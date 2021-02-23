@@ -1,4 +1,4 @@
-import {Movies} from './movies'
+import {Movies, MoviesDetailResponse} from './movies'
 
 export interface User {
   userName: string
@@ -7,5 +7,6 @@ export interface User {
 export type UserState = {
   user?: User,
   menuDrawer: boolean,
-  favorites: Movies[]
+  favorites: Movies[],
+  watchlist: MoviesDetailResponse[],
 }

@@ -17,6 +17,7 @@ const MoviesSlice = createSlice({
   initialState,
   reducers: {
   },
+
   extraReducers:
     builder => {
       builder

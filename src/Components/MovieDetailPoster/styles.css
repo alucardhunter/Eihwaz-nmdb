@@ -80,7 +80,8 @@
   .Movies_Detail_Buttons:nth-child(1) {
     margin-top: 20px !important; }
   .Button_trailer {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 20px; }
   .Movies_Detail_Container {
     height: 300px; }
   .Movies_Detail_Poster_Wraper {

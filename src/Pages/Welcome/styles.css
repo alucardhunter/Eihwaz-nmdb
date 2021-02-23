@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%; }
+  width: 100%;
+  background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #b7e8eb 100%); }
 
 .Movies_Section:nth-of-type(1) {
   margin-top: 50px; }

@@ -23,6 +23,20 @@
   white-space: nowrap;
   font-weight: 600 !important; }
 
+.Profile_Menu_Titles {
+  color: #6104f7 !important;
+  font-size: 20px !important;
+  margin-left: 10px !important;
+  text-transform: none !important;
+  width: 15vw;
+  border-radius: 20px !important;
+  height: 7vh;
+  white-space: nowrap;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .Logo_Container {
   display: flex;
   width: 15%;

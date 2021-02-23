@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css'
-import { AppBar, Toolbar, Button, useScrollTrigger, Slide, IconButton, SwipeableDrawer } from '@material-ui/core'
+import { AppBar, Toolbar, Button, useScrollTrigger, Slide, IconButton, SwipeableDrawer, Avatar } from '@material-ui/core'
 import Logo from '../../../Assets/Images/Eihwaz2.png'
 import MenuIcon from '@material-ui/icons/Menu'
 import { useHistory } from 'react-router-dom'
@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux'
 import { AppDispatch } from '../../../Store/store'
 import { RootState } from '../../../Store/rootReducer'
 import { toogleDrawer } from '../../../Store/Modules/User/userSlice'
+import AvatarImage from '../../../Assets/Images/Avatar.jpg'
 
 interface HideOnScrollProps {
   children?: any
@@ -38,6 +39,10 @@ const Header: React.FC = () => {
     dispatch(toogleDrawer())
   }
 
+  const handleProfileButton = () => {
+    history.push('/userprofile')
+  }
+
   return (
     <div>
       <HideOnScroll>
@@ -51,10 +56,12 @@ const Header: React.FC = () => {
             </div>
             <div className="Menu_Items_Container" >
               <Button className="Menu_Titles" onClick={() => handleMovieButton()}>Movies</Button>
-              <Button className="Menu_Titles">Tv Shows</Button>
-              <Button className="Menu_Titles">People</Button>
             </div>
             <div className="Profile_Container">
+              <IconButton onClick={() => handleProfileButton()} className="Profile_Menu_Titles" edge="start" aria-label="menu">
+                Profile Menu
+                <Avatar style={{ marginLeft: 20 }} alt="User Profile" src={AvatarImage} />
+              </IconButton>
             </div>
           </Toolbar>
         </AppBar>
@@ -72,16 +79,9 @@ const Header: React.FC = () => {
           <div style={{ height: 50, width: '100%', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', marginBottom: 10 }}>
             <Button className="Menu_Titles"
               onClick={() => {
-                handleMovieButton()
+                handleProfileButton()
                 dispatch(toogleDrawer())
-              }}>Tv Shows</Button>
-          </div>
-          <div style={{ height: 50, width: '100%', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', marginBottom: 10 }}>
-            <Button className="Menu_Titles"
-              onClick={() => {
-                handleMovieButton()
-                dispatch(toogleDrawer())
-              }}>People</Button>
+              }}>Profile Menu</Button>
           </div>
         </div>
       </SwipeableDrawer>

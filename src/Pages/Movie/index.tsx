@@ -20,6 +20,7 @@ const Movie: React.FC = () => {
   useEffect(() => {
     dispatch(getMovieDetail(+movie))
   }, [dispatch])
+
   return (
     <Grid container className="Movie_Page_Container" spacing={0}>
       {movieDetail &&
