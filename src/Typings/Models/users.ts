@@ -1,4 +1,4 @@
-import {Movies, MoviesDetailResponse} from './movies'
+import { Movies, MoviesDetailResponse } from './movies'
 
 export interface User {
   userName: string

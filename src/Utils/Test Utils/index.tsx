@@ -1,5 +1,5 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-import React, { ComponentType, ReactElement } from 'react'
+import React, { ReactElement } from 'react'
 import { Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import persistedReducer from '../../Store/persistReducer'
@@ -27,7 +27,7 @@ export const store = configureStore({
 const History = createBrowserHistory()
 const persistor = persistStore(store)
 
-const wrapComponent = (Component: ComponentType, props = {}): ReactElement => {
+const wrapComponent = (Component: any, props = {}): ReactElement => {
   return (
     <Provider store={store} >
       <PersistGate loading={null} persistor={persistor} >

@@ -11,7 +11,7 @@ import Wallpaper from '@material-ui/icons/Wallpaper'
 import moment from 'moment'
 import { setFavorites } from '../../Store/Modules/User/userSlice'
 
-interface MovieCardProps {
+export interface MovieCardProps {
   data: Movies
 }
 

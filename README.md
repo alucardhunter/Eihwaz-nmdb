@@ -1,12 +1,43 @@
+## Project information
+
+This project was made with create-react-app typescript template, using the redux Toolkit,
+react-dom-router and eslint
+
+All tests are located at `src/Tests` and `cypress` folders
+
+## Run Project
+
+To run project you must use 
+
+```
+$ yarn start or $ npm run start
+```
+
+## Build Project
+
+To build the project run:
+
+```
+$ yarn build or $ npm run build
+```
+
+## Run tests and eslint
+You can run all tests with:
+
+```
+$ yarn test or $ npm run test
+
+and
+
+$ yarn cypress:open or $ npm run cypress:open
+```
+For eslint run:
+
+```
+$ yarn lint or $ npm run lint
+```
+
 ## <a name="commit"></a> Commit Message Format
-
-*This specification is inspired and supersedes the [AngularJS commit message format][commit-message-format].*
-
-We have very precise rules over how our Git commit messages must be formatted.
-This format leads to **easier to read commit history**.
-
-Each commit message consists of a **header**, a **body**, and a **footer**.
-
 
 ```
 <header>

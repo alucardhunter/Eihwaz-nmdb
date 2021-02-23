@@ -8,9 +8,11 @@ export const getPopularMovies = createAsyncThunk(
     try {
       const response = await Api.getPopularMovies()
       return response
-    } catch (err) {
-      console.log(err)
-      throw err.response.data
+    } catch (error) {
+      if (error) {
+        console.log(error)
+      }
+      throw error.response.data
     }
   }
 )
@@ -21,9 +23,11 @@ export const gettopRatedMovies = createAsyncThunk(
     try {
       const response = await Api.gettopRatedMovies()
       return response
-    } catch (err) {
-      console.log(err)
-      throw err.response.data
+    } catch (error) {
+      if (error) {
+        console.log(error)
+      }
+      throw error.response.data
     }
   }
 )
@@ -34,9 +38,11 @@ export const getupcomingMovies = createAsyncThunk(
     try {
       const response = await Api.getupcomingMovies()
       return response
-    } catch (err) {
-      console.log(err)
-      throw err
+    } catch (error) {
+      if (error) {
+        console.log(error)
+      }
+      throw error
     }
   }
 )
@@ -47,9 +53,11 @@ export const searchMovies = createAsyncThunk(
     try {
       const response = await Api.searchMovies(payload)
       return response
-    } catch (err) {
-      console.log(err)
-      throw err.response.data
+    } catch (error) {
+      if (error) {
+        console.log(error)
+      }
+      throw error.response.data
     }
   }
 )
@@ -61,7 +69,6 @@ export const getMovieDetail = createAsyncThunk(
       const response = await Api.getMovieDetail(id)
       return response
     } catch (err) {
-      console.log(err)
       throw err.response.data
     }
   }

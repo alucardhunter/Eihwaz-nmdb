@@ -22,3 +22,12 @@
 .User_Profile_Section {
   margin-bottom: 20px;
 }
+
+@media (max-width: 900px) {
+  .User_Profile_Section {
+    width: 100%;
+  }
+  .User_Profile_Title {
+    margin-left: 20px;
+  }
+}

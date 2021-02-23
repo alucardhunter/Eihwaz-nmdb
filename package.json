@@ -39,7 +39,8 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --fix src/**/*.ts src/**/*.tsx"
+    "lint": "eslint --fix src/**/*.ts src/**/*.tsx",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -64,6 +65,7 @@
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
     "axios-mock-adapter": "^1.19.0",
+    "cypress": "^6.5.0",
     "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "2.22.1",

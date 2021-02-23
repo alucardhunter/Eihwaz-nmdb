@@ -42,7 +42,7 @@ export interface MovieDetail extends Movies {
   budget?: number,
   genres?: Genres[],
   homepage?: string,
-  imdb_id?: number,
+  imdb_id?: string,
   production_companies?: ProductionCompanies[],
   production_countries?: ProductionCountries[],
   revenue?: number,

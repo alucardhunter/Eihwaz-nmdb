@@ -1,8 +1,9 @@
-import { Movies } from '../../Typings/Models/movies'
+import { Movies, MoviesDetailResponse } from '../../Typings/Models/movies'
 
 interface CollectionInterface {
   Movie: Movies,
-  MovieArray: Movies[]
+  MovieArray: Movies[],
+  MovieDetail: MoviesDetailResponse
 }
 
 const Collection: CollectionInterface = {
@@ -149,7 +150,145 @@ const Collection: CollectionInterface = {
       vote_average: 7.3,
       vote_count: 4377
     }
-  ]
+  ],
+  MovieDetail: {
+    adult: false,
+    backdrop_path: '/srYya1ZlI97Au4jUYAktDe3avyA.jpg',
+    belongs_to_collection: {
+      id: 468552,
+      name: 'Wonder Woman Collection',
+      poster_path: '/8AQRfTuTHeFTddZN4IUAqprN8Od.jpg',
+      backdrop_path: '/n9KlvCOBFDmSyw3BgNrkUkxMFva.jpg'
+    },
+    budget: 200000000,
+    genres: [
+      {
+        id: 14,
+        name: 'Fantasy'
+      },
+      {
+        id: 28,
+        name: 'Action'
+      },
+      {
+        id: 12,
+        name: 'Adventure'
+      }
+    ],
+    homepage: 'https://www.warnerbros.com/movies/wonder-woman-1984',
+    id: 464052,
+    imdb_id: 'tt7126948',
+    original_language: 'en',
+    original_title: 'Wonder Woman 1984',
+    overview: 'Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s and finds a formidable foe by the name of the Cheetah.',
+    popularity: 2089.125,
+    poster_path: '/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg',
+    production_companies: [
+      {
+        id: 9993,
+        logo_path: '/2Tc1P3Ac8M479naPp1kYT3izLS5.png',
+        name: 'DC Entertainment',
+        origin_country: 'US'
+      },
+      {
+        id: 174,
+        logo_path: '/ky0xOc5OrhzkZ1N6KyUxacfQsCk.png',
+        name: 'Warner Bros. Pictures',
+        origin_country: 'US'
+      },
+      {
+        id: 114152,
+        logo_path: null,
+        name: 'The Stone Quarry',
+        origin_country: 'US'
+      },
+      {
+        id: 128064,
+        logo_path: '/13F3Jf7EFAcREU0xzZqJnVnyGXu.png',
+        name: 'DC Films',
+        origin_country: 'US'
+      },
+      {
+        id: 507,
+        logo_path: '/z7H707qUWigbjHnJDMfj6QITEpb.png',
+        name: 'Atlas Entertainment',
+        origin_country: 'US'
+      },
+      {
+        id: 429,
+        logo_path: '/2Tc1P3Ac8M479naPp1kYT3izLS5.png',
+        name: 'DC Comics',
+        origin_country: 'US'
+      }
+    ],
+    production_countries: [
+      {
+        iso_3166_1: 'US',
+        name: 'United States of America'
+      }
+    ],
+    release_date: '2020-12-16',
+    revenue: 159533000,
+    runtime: 152,
+    spoken_languages: [
+      {
+        english_name: 'English',
+        iso_639_1: 'en',
+        name: 'English'
+      }
+    ],
+    status: 'Released',
+    tagline: 'A new era of wonder begins.',
+    title: 'Wonder Woman 1984',
+    video: false,
+    vote_average: 6.9,
+    vote_count: 3823,
+    videos: {
+      results: [
+        {
+          id: '5ded686932489b0016c2760a',
+          iso_639_1: 'en',
+          iso_3166_1: 'US',
+          key: 'sfM7_JLk-84',
+          name: 'Official Trailer',
+          site: 'YouTube',
+          size: 1080,
+          type: 'Trailer'
+        },
+        {
+          id: '5f41589c028f1400315a70b8',
+          iso_639_1: 'en',
+          iso_3166_1: 'US',
+          key: 'XW2E2Fnh52w',
+          name: 'Wonder Woman 1984 - Official Main Trailer',
+          site: 'YouTube',
+          size: 1080,
+          type: 'Trailer'
+        },
+        {
+          id: '5f45fe1dcee4810036a9893d',
+          iso_639_1: 'en',
+          iso_3166_1: 'US',
+          key: 'E5Pj21yLknQ',
+          name: 'Wonder Woman 1984 - Official Main Trailer (Subtitled)',
+          site: 'YouTube',
+          size: 1080,
+          type: 'Trailer'
+        },
+        {
+          id: '5fd92a74226c56003e3dd6eb',
+          iso_639_1: 'en',
+          iso_3166_1: 'US',
+          key: 'I_MG6fklovc',
+          name: 'WW84 | Opening Scene',
+          site: 'YouTube',
+          size: 1080,
+          type: 'Clip'
+        }
+      ]
+    }
+  }
+
 }
 
 export default Collection

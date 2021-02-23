@@ -6,7 +6,9 @@ const getPopularMovies = async (): Promise<MoviesResponse> => {
     const response = await api.get('/movie/popular')
     return response.data
   } catch (error) {
-    console.log(error)
+    if (error) {
+      console.log(error)
+    }
     throw error
   }
 }
@@ -16,7 +18,9 @@ const gettopRatedMovies = async (): Promise<MoviesResponse> => {
     const response = await api.get('/movie/top_rated')
     return response.data
   } catch (error) {
-    console.log(error)
+    if (error) {
+      console.log(error)
+    }
     throw error
   }
 }
@@ -26,7 +30,9 @@ const getupcomingMovies = async (): Promise<MoviesResponse> => {
     const response = await api.get('/movie/upcoming')
     return response.data
   } catch (error) {
-    console.log(error)
+    if (error) {
+      console.log(error)
+    }
     throw error
   }
 }
@@ -46,7 +52,9 @@ const searchMovies = async (payload: MoviesSearchPayload): Promise<MoviesRespons
     const response = await api.get(url)
     return response.data
   } catch (error) {
-    console.log(error)
+    if (error) {
+      console.log(error)
+    }
     throw error
   }
 }
@@ -56,7 +64,9 @@ const getMovieDetail = async (id: number): Promise<MoviesDetailResponse> => {
     const response = await api.get(`/movie/${id}?append_to_response=videos`)
     return response.data
   } catch (error) {
-    console.log(error)
+    if (error) {
+      console.log(error)
+    }
     throw error
   }
 }

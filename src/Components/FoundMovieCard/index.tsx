@@ -13,7 +13,7 @@ import moment from 'moment'
 import LinesEllipsis from 'react-lines-ellipsis'
 import responsiveHOC from 'react-lines-ellipsis/lib/responsiveHOC'
 
-interface FoundMovieCardProps {
+export interface FoundMovieCardProps {
   data: Movies
 }
 

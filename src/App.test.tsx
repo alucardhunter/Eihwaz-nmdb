@@ -16,7 +16,7 @@ it('test hidden menu', async () => {
 
   return waitFor(() => { expect(header).toHaveStyle({ visibility: 'hidden' }) })
     .then(() => console.log('Dom Changed'))
-    .catch(err => console.log(err))
+    .catch(() => console.log('Dom not Changed'))
 })
 
 it('test redux', () => {

@@ -13,10 +13,14 @@ const Welcome: React.FunctionComponent = () => {
   const { favorites } = useSelector((state: RootState) => state.User)
   const { popularMovies, topRatedMovies, upcomingMovies } = useSelector((state: RootState) => state.Movies)
 
+  const loadMovies = async () => {
+    await dispatch(getPopularMovies())
+    await dispatch(gettopRatedMovies())
+    await dispatch(getupcomingMovies())
+  }
+
   useEffect(() => {
-    dispatch(getPopularMovies())
-    dispatch(gettopRatedMovies())
-    dispatch(getupcomingMovies())
+    loadMovies()
   }, [])
 
   return (
