@@ -22,7 +22,7 @@ export interface Genres {
 
 export interface ProductionCompanies {
   id?: number,
-  logo_path?: string,
+  logo_path?: string | null,
   name?: string,
   origin_country?: string
 }
@@ -33,6 +33,7 @@ export interface ProductionCountries {
 }
 
 export interface SpokenLanguages {
+  english_name?: string,
   iso_639_1?: string,
   name?: string
 }
